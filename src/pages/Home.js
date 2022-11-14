@@ -12,12 +12,12 @@ const Home = () => {
  
     useEffect(() => {
         const fetchWorkout = async () => {
-            const res = await fetch("/api/workouts", {
+            const res = await fetch("https://mern-backend-server.vercel.app/api/workouts", {
                 headers: {
                     "Authorization": `Bearer ${user.token}`
                 }
             }); 
-            //fetch endpoint was chnaged as we ADD PROXY INTO PACHAGE.JSON
+            //fetch endpoint was chnaged as we ADD PROXY INTO PACAGE.JSON
             // it is pretty important to add a proxy while we devoloping a website and use two serveres on one machine
             const json = await res.json();
 

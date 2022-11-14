@@ -10,7 +10,7 @@ export const useLogin = () => {
         setLoading(true)
         setError(null)
 
-        const res = await fetch("/api/user/login", {
+        const res = await fetch("https://mern-backend-server.vercel.app/api/user/login", {
             method: "POST",
             body: JSON.stringify({email, password}),
             headers: {
