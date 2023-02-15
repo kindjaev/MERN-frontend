@@ -21,7 +21,7 @@ const Form = () => {
 
         const workout = { title, load, reps };
 
-        const res = await fetch("/api/workouts", {
+        const res = await fetch("https://mern-backend-server.vercel.app/api/workouts", {
             method: "POST",
             body: JSON.stringify(workout),
             headers: {

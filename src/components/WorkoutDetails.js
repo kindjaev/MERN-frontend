@@ -13,7 +13,7 @@ const WorkoutDetails = ({workout}) => {
             return //stop the function if we dont have value for user
         }
 
-        const res = await fetch("/api/workouts/" + workout._id, {
+        const res = await fetch("https://mern-backend-server.vercel.app/api/workouts/" + workout._id, {
             method: "DELETE",
             headers: {
                 "Authorization": `Bearer ${user.token}` //added
